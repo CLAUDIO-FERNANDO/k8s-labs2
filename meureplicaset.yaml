@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet  
+metadata:
+  name: meu-replica-set
+spec:
+  selector: 
+    matchLabels:
+      app: exemplo
+  template: 
+    metadata:
+      labels:
+        app: exemplo
+    spec:
+      containers:
+        - name: meucontainer 
+          image: kubedevio/nginx-color:blue
+    
+
+    
+
+    #CONSULTAR O API-VERSION : 
+    # ao consultar kubectl api-resources  em ver em replicaset vamos ver qual será o APIVERSION nesee caso apps/v4
+
+   #  kubectl apply -f ARQUIVO.yaml

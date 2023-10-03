@@ -1,0 +1,24 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+metadata:
+  name:lab02
+nodes:
+- role: control-plane
+- role: worker
+- role: worker
+
+
+ # criar o cluster: kind create cluster --config lab001 --name lab001
+ 
+ ## pegar informaçoes de objeto : kubctl get NOME_DO_ OBJETO
+     ## EXEMPLO ##
+ # visualziar nodes : kubectl get nodes ( )
+ # visualizar  PODS : kubctl get pods
+ # visualizar namspaces: kubctl get namespaces
+ # kubectl get service
+
+### -- criando arquivos yaml com  dry-run    ### 
+# kubectl run my-nginx --image nginx --port 80 --dry-run=client -o yaml > pod.yaml
+ 
+# aplicar
+# apply -f arquivo.yaml

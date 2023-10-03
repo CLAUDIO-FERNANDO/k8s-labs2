@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-verde
+  labels:
+    app: nginx
+    versao: verde
+spec:
+  containers:
+  - name: meucontainer
+    image: kubedevio/nginx-color:green
+    
+
+
+# para aplicar 
+# apply -f arquivo.yaml
+
+# PUXAR A DESCRIÇÃO 
+# kubectl describe pod myapp2
+
+
+# port-forward / liberar porta 80
+# kubectl port-forward pod/myapp2 8080:80
